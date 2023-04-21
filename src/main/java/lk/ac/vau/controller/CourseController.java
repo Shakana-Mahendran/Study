@@ -29,5 +29,18 @@ public class CourseController {
 	public void RegesterNewCourse(@RequestBody Course course){
 		serv.addnewCou(course);
 	} 
+	@GetMapping("/{id}")
+	public Course getByCourseId(@PathVariable("id") Long id){
+		return serv.getByCourseId(id);
+	}
+    @PutMapping("/putv")
+	public String updateCou(@RequestBody Course course,Long id){
+		serv.updateCou(course,id);
+		return "the Course updated";
+	}
+	@DeleteMapping(path="{courseId}")
+	public void deleteCourse(@PathVariable("courseId") Long courseId){
+		serv.deleteCourseById(courseId);
+	}
 
 }

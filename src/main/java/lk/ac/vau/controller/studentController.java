@@ -33,6 +33,10 @@ public class studentController {
 	public void RegesterNewStudent(@RequestBody Student student){
 		ser.addnewStu(student);
 	} 
+	@GetMapping("/{studentid}")
+	public Student getByStudentId(@PathVariable("studentid") Long id){
+		return ser.getByStuId(id);
+	}
 	@PutMapping("/put")
 	public String updateStu(@RequestBody Student student){
 		ser.updateStu(student);
