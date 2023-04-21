@@ -16,21 +16,21 @@ public class StudentService {
         List<Student> result =  repo.findAll();
         return result;
     }
-    public void addnewStu(Student student){
-        repo.save(student);
-        System.out.println(student);
+    public void addnewStudent(Student student){
+            repo.save(student);
+        System.out.print(student);
     }
     public void updateStu(Student student) {
 		repo.save(student);
 	}
-    public Student getByStuId(Long id) {
+    public Student getByStudentsId(Long id) {
      Optional<Student> stud= repo.findById(id);
 		if(!stud.isPresent()) {
 			throw new Error("There is no Department with the Id "+id+" to delete.");
 		}
 		return stud.get();
 	}
-    public void deleteStuById(Long id) {
+    public void deleteStudentById(Long id) {
         Optional<Student> stud= repo.findById(id);
 		if(stud.isEmpty()) {
 			//throw new EntityNotFoundException("There is no Department with the Id "+id+" to delete.");

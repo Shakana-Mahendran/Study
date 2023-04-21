@@ -21,7 +21,7 @@ public class CourseService {
         repos.save(course);
         System.out.println(course);
     }
-    public Course getByCouId(Long id) {
+    public Course getByCourseId(Long id) {
         Optional<Course> cou= repos.findById(id);
            if(!cou.isPresent()) {
                throw new Error("There is no Department with the Id "+id+" to delete.");
@@ -31,7 +31,7 @@ public class CourseService {
     public void updateCou(Course course,Long id) {
 		repos.save(course);
 	}
-    public void deleteCouById(Long id) {
+    public void deleteCourseById(Long id) {
         Optional<Course> cou= repos.findById(id);
 		if(cou.isEmpty()) {
 			//throw new EntityNotFoundException("There is no Department with the Id "+id+" to delete.");
