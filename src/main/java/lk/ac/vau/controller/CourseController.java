@@ -29,7 +29,7 @@ public class CourseController {
 	public void RegesterNewCourse(@RequestBody Course course){
 		serv.addnewCou(course);
 	} 
-	@GetMapping("/{id}")
+    @GetMapping("/{id}")
 	public Course getByCourseId(@PathVariable("id") Long id){
 		return serv.getByCourseId(id);
 	}
@@ -42,5 +42,4 @@ public class CourseController {
 	public void deleteCourse(@PathVariable("courseId") Long courseId){
 		serv.deleteCourseById(courseId);
 	}
-
 }

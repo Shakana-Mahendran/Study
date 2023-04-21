@@ -6,6 +6,7 @@ import lk.ac.vau.Repo.studentRepo;
 import lk.ac.vau.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class StudentService {
