@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/Course")
+@RequestMapping("/course")
 
 public class CourseController {
 
@@ -29,18 +29,5 @@ public class CourseController {
 	public void RegesterNewCourse(@RequestBody Course course){
 		serv.addnewCou(course);
 	} 
-    @GetMapping("/{id}")
-	public Course getByCouId(@PathVariable("id") Long id){
-		return serv.getByCouId(id);
-	}
-    @PutMapping("/putv")
-	public String updateCou(@RequestBody Course course,Long id){
-		serv.updateCou(course,id);
-		return "the Course updated";
-	}
-	@DeleteMapping(path="{courseId}")
-	public void deleteCou(@PathVariable("courseId") Long courseId){
-		serv.deleteCouById(courseId);
-	}
 
 }
