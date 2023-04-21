@@ -16,9 +16,9 @@ public class StudentService {
         List<Student> result =  repo.findAll();
         return result;
     }
-    public void addnewStudent(Student student){
-            repo.save(student);
-        System.out.print(student);
+    public void addnewStu(Student student){
+        repo.save(student);
+        System.out.println(student);
     }
     public void updateStu(Student student) {
 		repo.save(student);
