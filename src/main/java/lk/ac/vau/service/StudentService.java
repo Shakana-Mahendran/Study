@@ -24,7 +24,7 @@ public class StudentService {
     public void updateStu(Student student) {
 		repo.save(student);
 	}
-    public Student getByStudentId(Long id) {
+    public Student getByStuId(Long id) {
      Optional<Student> stud= repo.findById(id);
 		if(!stud.isPresent()) {
 			throw new Error("There is no Department with the Id "+id+" to delete.");
